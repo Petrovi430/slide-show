@@ -20,7 +20,7 @@ function getData(url) {
 	});
 }
 
-getData('../test.json').then(function (data) {
+getData('./test.json').then(function (data) {
 	var baseImages = JSON.parse(data);
 	startGallery(baseImages);
 });
