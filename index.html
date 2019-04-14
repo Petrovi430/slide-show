@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="slide">
+        <div class="title">
+          <h2></h2>
+        </div>
+        <div class="left-toggle"></div>
+        <div class="right-toggle"></div>
+      </div>
+      <div class="images-container">
+        <div class="images"></div>
+      </div>
+      <div class="forms">
+        <form class="image">
+          <h2>Add image</h2>
+          <input type="text" placeholder="Title....." required>
+          <input type="url" placeholder="Url....." required>
+          <button class="add">Add</button>
+          <button class="remove">Remove current</button>
+        </form>
+        <form class="vote">
+          <h2>Vote</h2>
+          <input type="email" placeholder="Email" required>
+          <input type="range" min="0" max="100" value="100" class="verygood">
+          <button class="feedback">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

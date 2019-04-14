@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  height: 100vh;
+  font: normal 100% Calibri;
+}
+body div#wrapper {
+  width: 960px;
+  height: 852px;
+  margin: auto;
+  padding: 0px 45px;
+  border: 1px solid #d0ffff;
+  background: #faffff;
+}
+body div#wrapper div.slide {
+  position: relative;
+  width: 862px;
+  height: 400px;
+  margin: 20px auto;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
+}
+body div#wrapper div.slide div.title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 280px;
+  height: 60px;
+  padding: 0 15px;
+  background: -webkit-linear-gradient(0deg, #000, transparent);
+  background: -moz-linear-gradient(0deg, #000, transparent);
+  background: -o-linear-gradient(0deg, #000, transparent);
+  background: -ms-linear-gradient(0deg, #000, transparent);
+  background: linear-gradient(90deg, #000, transparent);
+  line-height: 60px;
+  color: #fff;
+}
+body div#wrapper div.slide div.left-toggle {
+  position: absolute;
+  top: 183px;
+  left: -30px;
+  width: 18px;
+  height: 34px;
+  background: url("img/toggle.png") center center no-repeat;
+  cursor: pointer;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+body div#wrapper div.slide div.left-toggle:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+body div#wrapper div.slide div.right-toggle {
+  position: absolute;
+  top: 183px;
+  left: 872px;
+  width: 18px;
+  height: 34px;
+  background: url("img/toggle.png") center center no-repeat;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  cursor: pointer;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+body div#wrapper div.slide div.right-toggle:hover {
+  -webkit-transform: rotate(180deg) scale(1.2);
+  -moz-transform: rotate(180deg) scale(1.2);
+  -o-transform: rotate(180deg) scale(1.2);
+  -ms-transform: rotate(180deg) scale(1.2);
+  transform: rotate(180deg) scale(1.2);
+}
+body div#wrapper div.images-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+body div#wrapper div.images-container::-webkit-scrollbar {
+  height: 4px;
+}
+body div#wrapper div.images-container::-webkit-scrollbar-thumb {
+  background-color: #f00;
+}
+body div#wrapper div.images-container div.images {
+  height: 87px;
+}
+body div#wrapper div.images-container div.images div.preview {
+  display: inline-block;
+  width: 83px;
+  height: 83px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+body div#wrapper div.images-container div.images div.preview:last-child {
+  margin-right: 0px;
+}
+body div#wrapper div.images-container div.images div.notselected {
+  border: 2px solid #acacac;
+}
+body div#wrapper div.images-container div.images div.selected {
+  border: 3px solid #4596d5;
+}
+body div#wrapper div.forms {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+body div#wrapper div.forms form.image,
+body div#wrapper div.forms form.vote {
+  width: 410px;
+  margin-top: 35px;
+}
+body div#wrapper div.forms form.image input,
+body div#wrapper div.forms form.vote input {
+  width: 100%;
+  height: 40px;
+  padding: 10px 20px;
+  border: 1px solid #686a6b;
+  font: 1.5em Calibri;
+  font-style: italic;
+  outline: none;
+}
+body div#wrapper div.forms form.image input::-webkit-input-placeholder,
+body div#wrapper div.forms form.vote input::-webkit-input-placeholder {
+  font-weight: lighter;
+  color: #353f3f;
+}
+body div#wrapper div.forms form.image input:nth-of-type(1),
+body div#wrapper div.forms form.vote input:nth-of-type(1) {
+  margin: 10px 0px;
+}
+body div#wrapper div.forms form.image button,
+body div#wrapper div.forms form.vote button {
+  font-size: 1.5em;
+  line-height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+body div#wrapper div.forms form.image button.add,
+body div#wrapper div.forms form.vote button.add {
+  width: 150px;
+  height: 40px;
+  margin: 20px 0px 20px 260px;
+  border: 1px solid #484848;
+  background: #fff;
+  color: #4d4c4c;
+}
+body div#wrapper div.forms form.image button.remove,
+body div#wrapper div.forms form.vote button.remove,
+body div#wrapper div.forms form.image button.feedback,
+body div#wrapper div.forms form.vote button.feedback {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 3px solid #6f1305;
+  background: #e32d08;
+  color: #fff;
+}
+body div#wrapper div.forms form.vote input[type="range"] {
+  margin: 30px 0px 50px;
+  padding: 0px;
+  -webkit-appearance: none;
+  width: 100%;
+  border: none;
+  background: url("img/range.png") 0% 70% no-repeat;
+}
+body div#wrapper div.forms form.vote input[type="range"]:focus {
+  outline: none;
+}
+body div#wrapper div.forms form.vote input[type="range"].verygood:after {
+  display: block;
+  width: 47px;
+  height: 47px;
+  margin: -5px 30px 0px 33px;
+  content: '';
+  background: url("img/smile5.png") center center no-repeat;
+}
+body div#wrapper div.forms form.vote input[type="range"].good:after {
+  display: block;
+  width: 47px;
+  height: 47px;
+  margin: -5px 30px 0px 33px;
+  content: '';
+  background: url("img/smile4.png") center center no-repeat;
+}
+body div#wrapper div.forms form.vote input[type="range"].neutrally:after {
+  display: block;
+  width: 47px;
+  height: 47px;
+  margin: -5px 30px 0px 33px;
+  content: '';
+  background: url("img/smile3.png") center center no-repeat;
+}
+body div#wrapper div.forms form.vote input[type="range"].bad:after {
+  display: block;
+  width: 47px;
+  height: 47px;
+  margin: -5px 30px 0px 33px;
+  content: '';
+  background: url("img/smile2.png") center center no-repeat;
+}
+body div#wrapper div.forms form.vote input[type="range"].verybad:after {
+  display: block;
+  width: 47px;
+  height: 47px;
+  margin: -5px 30px 0px 33px;
+  content: '';
+  background: url("img/smile1.png") center center no-repeat;
+}
+body div#wrapper div.forms form.vote input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  -webkit-box-shadow: 0px 0px 0px #000;
+  box-shadow: 0px 0px 0px #000;
+  background: #fff;
+  border-radius: 1px;
+  border: 1px solid #a9a9a9;
+}
+body div#wrapper div.forms form.vote input[type="range"]::-webkit-slider-thumb {
+  -webkit-box-shadow: 0px 0px 0px #000;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #be5b19;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  background: #d96f28;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+body div#wrapper div.forms form.vote input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  -webkit-box-shadow: 0px 0px 0px #000;
+  box-shadow: 0px 0px 0px #000;
+  background: #fff;
+  border-radius: 1px;
+  border: 1px solid #a9a9a9;
+}
+body div#wrapper div.forms form.vote input[type="range"]::-moz-range-thumb {
+  -webkit-box-shadow: 0px 0px 0px #000;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #be5b19;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  background: #d96f28;
+  cursor: pointer;
+}
+body div#wrapper div.forms form.vote input[type="range"]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+body div#wrapper div.forms form.vote input[type="range"]::-ms-fill-lower {
+  background: #fff;
+  border: 1px solid #a9a9a9;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 0px #000;
+  box-shadow: 0px 0px 0px #000;
+}
+body div#wrapper div.forms form.vote input[type="range"]::-ms-fill-upper {
+  background: #fff;
+  border: 1px solid #a9a9a9;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 0px #000;
+  box-shadow: 0px 0px 0px #000;
+}
+body div#wrapper div.forms form.vote input[type="range"]::-ms-thumb {
+  -webkit-box-shadow: 0px 0px 0px #000;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #be5b19;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  background: #d96f28;
+  cursor: pointer;
+}
